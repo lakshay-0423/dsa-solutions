@@ -1,7 +1,7 @@
-// Problem: Best Time to Buy and Sell Stock
-// Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-// Difficulty: Easy
-// Approach: Greedy - track minimum price seen so far and compute max profit
+// Problem: Maximum Subarray
+// Link: https://leetcode.com/problems/maximum-subarray/
+// Difficulty: Medium
+// Approach: Kadane's Algorithm - track running sum, reset to 0 if negative, update max throughout
 // Time: O(n) | Space: O(1)
 
 class Solution {
