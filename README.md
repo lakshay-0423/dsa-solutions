@@ -19,8 +19,8 @@ dsa-solutions/
 
 | Difficulty | Solved |
 |------------|--------|
-| Easy       | 0      |
-| Medium     | 0      |
+| Easy       | 4      |
+| Medium     | 5      |
 | Hard       | 0      |
 
 ## 🛠️ Language
