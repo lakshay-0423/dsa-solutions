@@ -1,0 +1,40 @@
+// Problem: Reorder List
+// Link: https://leetcode.com/problems/reorder-list/
+// Difficulty: Medium
+// Approach: Find middle (slow/fast pointers), reverse second half, merge two halves alternately
+// Time: O(n) | Space: O(1)
+
+class Solution {
+    public void reorderList(ListNode head) {
+        if(head==null || head.next==null) return;
+
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast.next!=null && fast.next.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        ListNode secondHalf=slow.next;
+        slow.next=null;
+
+        ListNode curr=secondHalf;
+        ListNode prev=null;
+        while(curr!=null){
+            ListNode next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+
+        ListNode secondHead=prev;
+        curr=head;
+        while(secondHead!=null){
+            ListNode next1=curr.next;
+            ListNode next2=secondHead.next;
+            curr.next=secondHead;
+            secondHead.next=next1;
+            curr=next1;
+            secondHead=next2;
+        }
+    }
+}
