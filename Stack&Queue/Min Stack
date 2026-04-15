@@ -1,0 +1,34 @@
+// Problem: Min Stack
+// Link: https://leetcode.com/problems/min-stack/
+// Difficulty: Medium
+// Approach: Use two stacks – one for all elements and another to track minimum values;
+//           push to min stack when new value is smaller or equal, and pop accordingly
+// Time: O(1) for all operations | Space: O(n)
+
+class MinStack {
+    Stack<Integer> st;
+    Stack<Integer> minSt;
+    public MinStack() {
+        st=new Stack<>();
+        minSt=new Stack<>();
+    }
+    
+    public void push(int val) {
+        st.push(val);
+        if(minSt.isEmpty() || minSt.peek()>=val) minSt.push(val);
+    }
+    
+    public void pop() {
+        if(st.isEmpty()) return;
+        int x=st.pop();
+        if(!minSt.isEmpty() && minSt.peek()==x) minSt.pop();
+    }
+    
+    public int top() {
+        return st.peek();
+    }
+    
+    public int getMin() {
+        return minSt.peek();
+    }
+}
