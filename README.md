@@ -19,9 +19,9 @@ dsa-solutions/
 
 | Difficulty | Solved |
 |------------|--------|
-| Easy       | 8      |
-| Medium     | 8      |
-| Hard       | 1      |
+| Easy       | 10     |
+| Medium     | 11     |
+| Hard       | 2      |
 
 ## 🛠️ Language
 Java
