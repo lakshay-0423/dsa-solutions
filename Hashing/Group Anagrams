@@ -1,0 +1,21 @@
+// Problem: Group Anagrams
+// Link: https://leetcode.com/problems/group-anagrams/
+// Difficulty: Medium
+// Approach: Sort each string as key - group original strings by their sorted character key in hashmap
+// Time: O(n * k log k) | Space: O(n * k)
+
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        HashMap<String,List<String>> map= new HashMap<>();
+        for(String s : strs){
+            char[] arr=s.toCharArray();
+            Arrays.sort(arr);
+            String x=String.valueOf(arr);
+            if(!map.containsKey(x)){
+                map.put(x,new ArrayList<>());
+            }
+            map.get(x).add(s);
+        }
+        return new ArrayList<>(map.values());
+    }
+}
