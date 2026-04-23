@@ -20,7 +20,7 @@ dsa-solutions/
 | Difficulty | Solved |
 |------------|--------|
 | Easy       | 10     |
-| Medium     | 11     |
+| Medium     | 15     |
 | Hard       | 2      |
 
 ## 🛠️ Language
